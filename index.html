@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crust 'N' Crumb Café | Made For Your Moment</title>
+  <meta name="description" content="Good coffee. Fresh bakes. Great company. Experience premium quality ingredients, crafted with care. Every sip. Every bite.">
+  
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content="Crust 'N' Crumb Café | Made For Your Moment">
+  <meta property="og:description" content="Premium quality coffee, fresh artisan bakes, slushies, and smoothies. Made with love and care.">
+  <meta property="og:image" content="assets/hero_latte.png">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Preloader Splash Screen -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <img src="assets/logo.png" alt="Crust 'N' Crumb Logo" class="preloader-logo-img">
+      <div class="preloader-line-container">
+        <div class="preloader-progress-bar"></div>
+      </div>
+      <p class="preloader-text">Baking & Brewing...</p>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="#home" class="logo-link">
+        <div class="logo-wrapper">
+          <img src="assets/logo.png" alt="Crust 'N' Crumb Logo" class="logo-img">
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">HOME</a>
+        <a href="#menu" class="nav-link">MENU</a>
+        <a href="#about-us" class="nav-link">ABOUT US</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+
+      <!-- Desktop Header CTA -->
+      <div class="header-cta-wrapper">
+        <a href="#menu-helper" class="btn-order-online open-order-helper-btn" id="header-order-btn">
+          ORDER ONLINE <i class="fa-solid rel-icon fa-bag-shopping"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-nav-links">
+      <a href="#home" class="mobile-link">HOME</a>
+      <a href="#menu" class="mobile-link">MENU</a>
+      <a href="#about-us" class="mobile-link">ABOUT US</a>
+      <a href="#contact" class="mobile-link">CONTACT</a>
+      <a href="#menu-helper" class="mobile-link btn-mobile-order open-order-helper-btn">
+        ORDER ONLINE <i class="fa-solid fa-bag-shopping"></i>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-content scroll-reveal">
+        <span class="hero-tagline">— GOOD COFFEE. FRESH BAKES.</span>
+        <h1 class="hero-title">Made for<br>your moment.</h1>
+        <p class="hero-subtitle">Quality ingredients, crafted with care. Every sip. Every bite.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">
+            VIEW OUR MENU <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper scroll-reveal">
+        <div class="hero-image-glow"></div>
+        <img src="assets/hero_latte.png" alt="Premium coffee latte in green cup" class="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="section-header scroll-reveal">
+      <span class="section-tagline">— OUR MENU —</span>
+      <h2 class="section-title">Freshly made. Perfectly priced.</h2>
+    </div>
+
+    <div class="menu-grid">
+      
+      <!-- Coffee Category Card -->
+      <div class="menu-card scroll-reveal">
+        <div class="menu-card-image-wrapper">
+          <img src="assets/category_coffee.png" alt="Coffee category image" class="menu-card-img">
+        </div>
+        <div class="menu-card-content">
+          <h3 class="menu-category-title">COFFEE</h3>
+          <ul class="menu-item-list">
+            <li class="menu-item">
+              <span class="menu-item-name">Espresso</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$2.50</span>
+              <button class="add-to-whatsapp-btn" data-name="Espresso" data-price="2.50" aria-label="Add Espresso to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Americano</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.00</span>
+              <button class="add-to-whatsapp-btn" data-name="Americano" data-price="3.00" aria-label="Add Americano to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Cappuccino</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Cappuccino" data-price="3.75" aria-label="Add Cappuccino to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Latte</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.00</span>
+              <button class="add-to-whatsapp-btn" data-name="Latte" data-price="4.00" aria-label="Add Latte to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Mocha</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.50</span>
+              <button class="add-to-whatsapp-btn" data-name="Mocha" data-price="4.50" aria-label="Add Mocha to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Caramel Latte</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Caramel Latte" data-price="4.75" aria-label="Add Caramel Latte to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Vanilla Latte</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Vanilla Latte" data-price="4.75" aria-label="Add Vanilla Latte to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+          </ul>
+          <a href="#" class="view-category-details-btn" data-category="coffee">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Fresh Bakes Category Card -->
+      <div class="menu-card scroll-reveal">
+        <div class="menu-card-image-wrapper">
+          <img src="assets/category_bakes.png" alt="Fresh Bakes category image" class="menu-card-img">
+        </div>
+        <div class="menu-card-content">
+          <h3 class="menu-category-title">FRESH BAKES</h3>
+          <ul class="menu-item-list">
+            <li class="menu-item">
+              <span class="menu-item-name">Chocolate Muffin</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.00</span>
+              <button class="add-to-whatsapp-btn" data-name="Chocolate Muffin" data-price="3.00" aria-label="Add Chocolate Muffin to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Blueberry Muffin</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.00</span>
+              <button class="add-to-whatsapp-btn" data-name="Blueberry Muffin" data-price="3.00" aria-label="Add Blueberry Muffin to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Croissant</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.50</span>
+              <button class="add-to-whatsapp-btn" data-name="Croissant" data-price="3.50" aria-label="Add Croissant to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Almond Croissant</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.00</span>
+              <button class="add-to-whatsapp-btn" data-name="Almond Croissant" data-price="4.00" aria-label="Add Almond Croissant to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Cinnamon Roll</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$4.00</span>
+              <button class="add-to-whatsapp-btn" data-name="Cinnamon Roll" data-price="4.00" aria-label="Add Cinnamon Roll to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Brownie</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.25</span>
+              <button class="add-to-whatsapp-btn" data-name="Brownie" data-price="3.25" aria-label="Add Brownie to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Cookies</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$2.50</span>
+              <button class="add-to-whatsapp-btn" data-name="Cookies" data-price="2.50" aria-label="Add Cookies to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+          </ul>
+          <a href="#" class="view-category-details-btn" data-category="bakes">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Slushies Category Card -->
+      <div class="menu-card scroll-reveal">
+        <div class="menu-card-image-wrapper">
+          <img src="assets/category_slushies.png" alt="Slushies category image" class="menu-card-img">
+        </div>
+        <div class="menu-card-content">
+          <h3 class="menu-category-title">SLUSHIES</h3>
+          <ul class="menu-item-list">
+            <li class="menu-item">
+              <span class="menu-item-name">Classic Cola</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Classic Cola" data-price="3.75" aria-label="Add Classic Cola to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Blue Raspberry</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Blue Raspberry" data-price="3.75" aria-label="Add Blue Raspberry to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Strawberry</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Strawberry Slushie" data-price="3.75" aria-label="Add Strawberry Slushie to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Mango</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Mango Slushie" data-price="3.75" aria-label="Add Mango Slushie to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Lemon Lime</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Lemon Lime" data-price="3.75" aria-label="Add Lemon Lime to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Watermelon</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Watermelon Slushie" data-price="3.75" aria-label="Add Watermelon Slushie to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Grape</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$3.75</span>
+              <button class="add-to-whatsapp-btn" data-name="Grape Slushie" data-price="3.75" aria-label="Add Grape Slushie to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+          </ul>
+          <a href="#" class="view-category-details-btn" data-category="slushies">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Smoothies Category Card -->
+      <div class="menu-card scroll-reveal">
+        <div class="menu-card-image-wrapper">
+          <img src="assets/category_smoothies.png" alt="Smoothies category image" class="menu-card-img">
+        </div>
+        <div class="menu-card-content">
+          <h3 class="menu-category-title">SMOOTHIES</h3>
+          <ul class="menu-item-list">
+            <li class="menu-item">
+              <span class="menu-item-name">Strawberry Banana</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$5.25</span>
+              <button class="add-to-whatsapp-btn" data-name="Strawberry Banana Smoothie" data-price="5.25" aria-label="Add Strawberry Banana to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Mango Passion</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$5.25</span>
+              <button class="add-to-whatsapp-btn" data-name="Mango Passion Smoothie" data-price="5.25" aria-label="Add Mango Passion to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Berry Blast</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$5.25</span>
+              <button class="add-to-whatsapp-btn" data-name="Berry Blast Smoothie" data-price="5.25" aria-label="Add Berry Blast to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Tropical Green</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$5.25</span>
+              <button class="add-to-whatsapp-btn" data-name="Tropical Green Smoothie" data-price="5.25" aria-label="Add Tropical Green to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Peanut Butter Banana</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$5.25</span>
+              <button class="add-to-whatsapp-btn" data-name="Peanut Butter Banana Smoothie" data-price="5.25" aria-label="Add Peanut Butter Banana to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Pina Colada</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$5.25</span>
+              <button class="add-to-whatsapp-btn" data-name="Pina Colada Smoothie" data-price="5.25" aria-label="Add Pina Colada to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+            <li class="menu-item">
+              <span class="menu-item-name">Mixed Berry</span>
+              <span class="menu-item-dots"></span>
+              <span class="menu-item-price">$5.25</span>
+              <button class="add-to-whatsapp-btn" data-name="Mixed Berry Smoothie" data-price="5.25" aria-label="Add Mixed Berry to order"><i class="fa-solid fa-plus"></i></button>
+            </li>
+          </ul>
+          <a href="#" class="view-category-details-btn" data-category="smoothies">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features Badges Section -->
+  <section class="features-section">
+    <div class="features-container">
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div class="feature-text-wrapper">
+          <h4 class="feature-title">QUALITY COFFEE</h4>
+          <p class="feature-desc">Sourced from the best beans around the world.</p>
+        </div>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <div class="feature-text-wrapper">
+          <h4 class="feature-title">FRESH INGREDIENTS</h4>
+          <p class="feature-desc">We use fresh, locally sourced ingredients.</p>
+        </div>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-cookie-bite"></i>
+        </div>
+        <div class="feature-text-wrapper">
+          <h4 class="feature-title">MADE DAILY</h4>
+          <p class="feature-desc">Bakes and treats made fresh every day.</p>
+        </div>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="feature-text-wrapper">
+          <h4 class="feature-title">MADE WITH CARE</h4>
+          <p class="feature-desc">Every item is made with love and care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-section" id="about-us">
+    <div class="about-container">
+      <div class="about-images-wrapper scroll-reveal">
+        <div class="about-img-frame">
+          <img src="assets/category_coffee.png" alt="Barista pouring coffee" class="about-img-primary">
+          <img src="assets/category_bakes.png" alt="Fresh baked muffins" class="about-img-secondary">
+        </div>
+      </div>
+      <div class="about-content scroll-reveal">
+        <span class="about-tagline">— OUR STORY —</span>
+        <h2 class="about-title">Crafting moments of joy, one cup at a time.</h2>
+        <p class="about-desc">At Crust 'N' Crumb Café, we believe that every day deserves a perfect start. Since our humble beginnings, our focus has always been on premium quality coffee and artisan baked goods, prepared fresh and served in a warm, welcoming atmosphere.</p>
+        <p class="about-desc">Our master roasters source coffee beans from sustainable farms worldwide, roasting them to perfection to capture deep, rich notes. Meanwhile, our bakers rise before the sun, crafting buttery croissants, rich cinnamon rolls, and indulgent brownies from scratch daily. Visit us and find your perfect moment.</p>
+        <div class="about-signature">
+          <span class="signature-text">Crust 'N' Crumb Team</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Find Us Section -->
+  <section class="contact-section" id="contact">
+    <div class="section-header scroll-reveal">
+      <span class="section-tagline">— VISIT & CONTACT —</span>
+      <h2 class="section-title">We would love to hear from you.</h2>
+    </div>
+
+    <div class="contact-container">
+      <!-- Contact Details -->
+      <div class="contact-details scroll-reveal">
+        <h3 class="contact-subtitle">VISIT US TODAY</h3>
+        <p class="contact-text">Good coffee. Fresh bakes. Great company. Drop by one of our spots or get in touch for custom events.</p>
+        
+        <ul class="contact-info-list">
+          <li class="contact-info-item">
+            <i class="fa-solid fa-location-dot contact-icon"></i>
+            <div>
+              <strong>Location</strong>
+              <p>12 Brewmaster Avenue, Coffee District, CA 90210</p>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <i class="fa-solid fa-phone contact-icon"></i>
+            <div>
+              <strong>Phone Number</strong>
+              <p>+1 (555) 782-9966</p>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <i class="fa-solid fa-envelope contact-icon"></i>
+            <div>
+              <strong>Email Address</strong>
+              <p>hello@crustncrumb.com</p>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <i class="fa-solid fa-clock contact-icon"></i>
+            <div>
+              <strong>Opening Hours</strong>
+              <p>Mon - Fri: 7:00 AM - 7:00 PM<br>Sat - Sun: 8:00 AM - 6:00 PM</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper scroll-reveal">
+        <h3 class="contact-subtitle">SEND US A MESSAGE</h3>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="What is this about?" required>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-accent btn-submit" id="submit-btn">
+            SEND MESSAGE <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+        <!-- Form Success State -->
+        <div class="form-success-message" id="form-success">
+          <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h4>Message Sent!</h4>
+          <p>Thank you for reaching out. We will get back to you shortly.</p>
+          <button class="btn btn-primary btn-reset" id="form-reset-btn">Send Another Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      
+      <!-- Footer Column Left -->
+      <div class="footer-col footer-col-left scroll-reveal">
+        <h3 class="footer-heading">VISIT US TODAY</h3>
+        <p class="footer-text">Good coffee. Fresh bakes. Great company.</p>
+        <button class="btn-location" id="open-location-modal-btn">
+          <i class="fa-solid fa-location-dot"></i> FIND A LOCATION
+        </button>
+      </div>
+
+      <!-- Footer Column Center -->
+      <div class="footer-col footer-col-center scroll-reveal">
+        <div class="footer-logo-wrapper">
+          <img src="assets/logo.png" alt="Crust 'N' Crumb Logo" class="footer-logo">
+        </div>
+      </div>
+
+      <!-- Footer Column Right -->
+      <div class="footer-col footer-col-right scroll-reveal">
+        <h3 class="footer-heading">FOLLOW US</h3>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p class="footer-copyright">&copy; 2025 Crust 'N' Crumb Café. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- LOCATION MODAL -->
+  <div class="modal-overlay" id="location-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-location-modal-btn" aria-label="Close Location Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-header">
+        <i class="fa-solid fa-location-dot modal-header-icon"></i>
+        <h3 class="modal-title">Our Café Locations</h3>
+      </div>
+      <div class="modal-body">
+        <div class="location-tabs">
+          <button class="location-tab-btn active" data-location="downtown">Downtown Branch</button>
+          <button class="location-tab-btn" data-location="suburbs">Westside Suburbs</button>
+        </div>
+        
+        <div class="location-details-container">
+          <div class="location-detail-content active" id="loc-downtown">
+            <div class="location-info-grid">
+              <div>
+                <strong>Address</strong>
+                <p>12 Brewmaster Avenue, Coffee District, CA 90210</p>
+                <strong>Hours</strong>
+                <p>Mon - Fri: 7:00 AM - 7:00 PM<br>Sat - Sun: 8:00 AM - 6:00 PM</p>
+                <strong>Phone</strong>
+                <p>+1 (555) 782-9966</p>
+              </div>
+              <div class="location-map">
+                <!-- Styled map mockup placeholder -->
+                <div class="map-placeholder">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <span>Map Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="location-detail-content" id="loc-suburbs">
+            <div class="location-info-grid">
+              <div>
+                <strong>Address</strong>
+                <p>448 Baker Street, Croissant Village, CA 91302</p>
+                <strong>Hours</strong>
+                <p>Mon - Fri: 6:30 AM - 6:00 PM<br>Sat - Sun: 7:30 AM - 5:00 PM</p>
+                <strong>Phone</strong>
+                <p>+1 (555) 782-9988</p>
+              </div>
+              <div class="location-map">
+                <div class="map-placeholder">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <span>Map Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHATSAPP ORDER HELPER / INTERACTIVE MENU MODAL -->
+  <div class="modal-overlay" id="order-helper-modal">
+    <div class="modal-card order-helper-card">
+      <button class="modal-close-btn" id="close-order-helper-btn" aria-label="Close Order Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-header">
+        <i class="fa-brands fa-whatsapp modal-header-icon whatsapp-color"></i>
+        <h3 class="modal-title">WhatsApp Order Builder</h3>
+      </div>
+      <div class="modal-body">
+        <p class="order-helper-intro">Build your order below, then tap send. We'll automatically compose a WhatsApp message for you to submit to our baristas!</p>
+        
+        <div class="order-builder-layout">
+          <!-- Selection Column -->
+          <div class="order-builder-menu">
+            <div class="order-menu-tabs">
+              <button class="menu-tab-btn active" data-tab="coffee">Coffee</button>
+              <button class="menu-tab-btn" data-tab="bakes">Bakes</button>
+              <button class="menu-tab-btn" data-tab="slushies">Slushies</button>
+              <button class="menu-tab-btn" data-tab="smoothies">Smoothies</button>
+            </div>
+            
+            <div class="order-menu-items">
+              <!-- Coffee tab -->
+              <div class="order-tab-content active" id="order-coffee">
+                <div class="order-grid-item" data-name="Espresso" data-price="2.50">
+                  <span>Espresso</span><span>$2.50</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Americano" data-price="3.00">
+                  <span>Americano</span><span>$3.00</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Cappuccino" data-price="3.75">
+                  <span>Cappuccino</span><span>$3.75</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Latte" data-price="4.00">
+                  <span>Latte</span><span>$4.00</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Mocha" data-price="4.50">
+                  <span>Mocha</span><span>$4.50</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Caramel Latte" data-price="4.75">
+                  <span>Caramel Latte</span><span>$4.75</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Vanilla Latte" data-price="4.75">
+                  <span>Vanilla Latte</span><span>$4.75</span><button class="btn-item-add">+</button>
+                </div>
+              </div>
+              
+              <!-- Bakes tab -->
+              <div class="order-tab-content" id="order-bakes">
+                <div class="order-grid-item" data-name="Chocolate Muffin" data-price="3.00">
+                  <span>Chocolate Muffin</span><span>$3.00</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Blueberry Muffin" data-price="3.00">
+                  <span>Blueberry Muffin</span><span>$3.00</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Croissant" data-price="3.50">
+                  <span>Croissant</span><span>$3.50</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Almond Croissant" data-price="4.00">
+                  <span>Almond Croissant</span><span>$4.00</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Cinnamon Roll" data-price="4.00">
+                  <span>Cinnamon Roll</span><span>$4.00</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Brownie" data-price="3.25">
+                  <span>Brownie</span><span>$3.25</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Cookies" data-price="2.50">
+                  <span>Cookies</span><span>$2.50</span><button class="btn-item-add">+</button>
+                </div>
+              </div>
+
+              <!-- Slushies tab -->
+              <div class="order-tab-content" id="order-slushies">
+                <div class="order-grid-item" data-name="Classic Cola Slushie" data-price="3.75">
+                  <span>Classic Cola</span><span>$3.75</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Blue Raspberry Slushie" data-price="3.75">
+                  <span>Blue Raspberry</span><span>$3.75</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Strawberry Slushie" data-price="3.75">
+                  <span>Strawberry</span><span>$3.75</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Mango Slushie" data-price="3.75">
+                  <span>Mango</span><span>$3.75</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Lemon Lime Slushie" data-price="3.75">
+                  <span>Lemon Lime</span><span>$3.75</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Watermelon Slushie" data-price="3.75">
+                  <span>Watermelon</span><span>$3.75</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Grape Slushie" data-price="3.75">
+                  <span>Grape</span><span>$3.75</span><button class="btn-item-add">+</button>
+                </div>
+              </div>
+
+              <!-- Smoothies tab -->
+              <div class="order-tab-content" id="order-smoothies">
+                <div class="order-grid-item" data-name="Strawberry Banana Smoothie" data-price="5.25">
+                  <span>Strawberry Banana</span><span>$5.25</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Mango Passion Smoothie" data-price="5.25">
+                  <span>Mango Passion</span><span>$5.25</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Berry Blast Smoothie" data-price="5.25">
+                  <span>Berry Blast</span><span>$5.25</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Tropical Green Smoothie" data-price="5.25">
+                  <span>Tropical Green</span><span>$5.25</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Peanut Butter Banana Smoothie" data-price="5.25">
+                  <span>Peanut Butter Banana</span><span>$5.25</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Pina Colada Smoothie" data-price="5.25">
+                  <span>Pina Colada</span><span>$5.25</span><button class="btn-item-add">+</button>
+                </div>
+                <div class="order-grid-item" data-name="Mixed Berry Smoothie" data-price="5.25">
+                  <span>Mixed Berry</span><span>$5.25</span><button class="btn-item-add">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkout/Summary Column -->
+          <div class="order-summary-panel">
+            <h4 class="summary-title">Your Order Summary</h4>
+            <div class="order-summary-list" id="order-summary-list">
+              <div class="empty-summary-message">
+                <i class="fa-solid fa-mug-hot"></i>
+                <p>No items added yet. Click "+" to build your order!</p>
+              </div>
+            </div>
+            
+            <div class="order-summary-footer">
+              <div class="total-row">
+                <span>Estimated Total:</span>
+                <span id="order-estimated-total">$0.00</span>
+              </div>
+              <div class="form-group select-group">
+                <label for="pickup-time" class="form-label font-small">Select Pickup Time</label>
+                <select id="pickup-time" class="form-select">
+                  <option value="ASAP (15-20 mins)">ASAP (15-20 mins)</option>
+                  <option value="In 30 mins">In 30 mins</option>
+                  <option value="In 1 hour">In 1 hour</option>
+                  <option value="Later today">Later today</option>
+                </select>
+              </div>
+              <button class="btn btn-accent btn-send-whatsapp" id="send-whatsapp-order-btn" disabled>
+                ORDER VIA WHATSAPP <i class="fa-brands fa-whatsapp"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="main.js"></script>
+</body>
+</html>

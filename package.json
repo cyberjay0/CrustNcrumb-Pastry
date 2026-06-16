@@ -1,0 +1,12 @@
+{
+  "name": "crust-n-crumb-website",
+  "version": "1.0.0",
+  "description": "Crust 'N' Crumb Café website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 8086 -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
