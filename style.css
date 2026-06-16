@@ -172,6 +172,7 @@ img {
   margin-bottom: 2rem;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
   animation: preloader-pulse 2s infinite ease-in-out;
+  mix-blend-mode: screen;
 }
 
 .preloader-line-container {
@@ -253,6 +254,7 @@ img {
   width: 68px;
   height: auto;
   transition: var(--transition-smooth);
+  mix-blend-mode: screen;
 }
 
 .site-header.scrolled .logo-img {
