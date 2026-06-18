@@ -162,26 +162,37 @@ img {
 }
 
 .preloader-content {
-  text-align: center;
-  max-width: 300px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .preloader-logo-img {
   width: 130px;
   height: auto;
-  margin-bottom: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
   animation: preloader-pulse 2s infinite ease-in-out;
   mix-blend-mode: screen;
 }
 
 .preloader-line-container {
-  width: 100%;
+  position: absolute;
+  top: calc(50% + 90px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 1px;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .preloader-progress-bar {
@@ -192,16 +203,22 @@ img {
 }
 
 .preloader-text {
+  position: absolute;
+  top: calc(50% + 110px);
+  left: 50%;
+  transform: translateX(-50%);
   color: var(--color-green-light);
   font-family: var(--font-serif);
   font-size: 1.1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  width: 100%;
+  text-align: center;
 }
 
 @keyframes preloader-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.95; }
-  50% { transform: scale(1.04); opacity: 1; }
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.95; }
+  50% { transform: translate(-50%, -50%) scale(1.04); opacity: 1; }
 }
 
 @keyframes preloader-loading {
@@ -254,7 +271,7 @@ img {
   width: 68px;
   height: auto;
   transition: var(--transition-smooth);
-  mix-blend-mode: screen;
+  filter: url(#remove-black-bg);
 }
 
 .site-header.scrolled .logo-img {
@@ -1161,7 +1178,7 @@ img {
 .footer-logo {
   width: 110px;
   height: auto;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+  filter: url(#remove-black-bg) drop-shadow(0 4px 8px rgba(0,0,0,0.25));
 }
 
 .footer-socials {
