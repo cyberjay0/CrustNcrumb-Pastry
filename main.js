@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>No items added yet. Click "+" to build your order!</p>
         </div>
       `;
-      orderTotalText.textContent = '$0.00';
+      orderTotalText.textContent = '₦0';
       sendWhatsappBtn.disabled = true;
       return;
     }
@@ -329,13 +329,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="summary-item-qty">${item.qty}</span>
             <button class="btn-qty-mod inc-qty" data-name="${item.name}">+</button>
           </div>
-          <span class="summary-item-total">$${itemTotal.toFixed(2)}</span>
+          <span class="summary-item-total">₦${itemTotal.toLocaleString()}</span>
         </div>
       `;
     });
 
     orderSummaryList.innerHTML = summaryHtml;
-    orderTotalText.textContent = `$${total.toFixed(2)}`;
+    orderTotalText.textContent = `₦${total.toLocaleString()}`;
     sendWhatsappBtn.disabled = false;
 
     // Bind event listeners to new quantity modify buttons
@@ -365,10 +365,10 @@ document.addEventListener('DOMContentLoaded', () => {
     cart.forEach(item => {
       const itemTotal = item.price * item.qty;
       total += itemTotal;
-      message += `• *${item.qty}x* ${item.name} ($${item.price.toFixed(2)} each) - _Subtotal: $${itemTotal.toFixed(2)}_\n`;
+      message += `• *${item.qty}x* ${item.name} (₦${item.price.toLocaleString()} each) - _Subtotal: ₦${itemTotal.toLocaleString()}_\n`;
     });
     
-    message += `\n💵 *Estimated Total:* $${total.toFixed(2)}\n`;
+    message += `\n💵 *Estimated Total:* ₦${total.toLocaleString()}\n`;
     message += `⏱️ *Requested Pickup Time:* ${time}\n\n`;
     message += `Please confirm availability and pickup instructions. Thank you!`;
 
